@@ -1,3 +1,6 @@
+"type npm start"
+
+
 /*🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️ Task 1: Warm-up! 🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️🏋️‍♂️*/
 
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS INSIDE OF A FUNCTION (tasks 1d through task 7), IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
@@ -20,6 +23,12 @@ Do the following:
    HINT: no function required
 */
 
+const votingAge = 18
+if (votingAge >= 18 ){
+  console.log (true)
+} else 
+console.log (false)
+
 
 
 /*
@@ -33,7 +42,10 @@ Do the following:
    HINT: no function required
 */
 
-
+let var1 = "22"
+let var2 = "500"
+let var1 = "490"
+console.log (var1)
 
 
 
@@ -48,7 +60,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+const year = 1999
+number.isInteger.year("1999");  
+console.log(year)
 
 
 /*
@@ -60,10 +74,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+function multiply(a, b){
+  return a*b;
 }
-
+console.log
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -76,10 +90,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(age){
+let dogAge = 10 * age
+return dogAge
 }
-
+console.log(dogAge)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -109,9 +124,38 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(weight, age); {
+  if (age >= 1); {
+    if (weight <= 5) {
+      return (weight /100) *5;
+    } else if (weight > 5 && weight <= 10) {
+      return (weight / 100) *4;
+    } else if (weight > 10 && weight <= 15) {
+      return (weight 100) *3;
+    } else if (weight > 15) {
+      return (weight / 100) * 2 {
+        else {
+          return 'error'
+        }
+      } else if (age < 1) {
+        if (age <= 0.333) {
+          return (weight /100) * 100
+        } else if (age > 0.333 && age <= .585) {
+          return (weight / 100) * 5
+        } else if (age > 0.585) {
+          return (weight / 100) * 4
+        } else {
+            return "error"
+        }
+      } else {
+        return "error"
+      }
+    }
+  }
 }
+
+console.log(hungryDog(10, 3))
+
 
 
 
@@ -139,7 +183,17 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 */
 
 function game(user, computer){
-  /*add your code here*/
+  if(user === computer){
+    return `it's a tie`;
+  } else if(user === 'rock' && computer === 'scissors'){
+    return `you win!`;
+  } else if(user === 'paper' && computer === 'rock'){
+    return `you win`;
+  } else if(user === 'scissors' && computer === 'paper'){
+    return `you win!`;
+  }else{
+    return `you lost!`;
+  }
 }
 
 
@@ -155,10 +209,10 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  return km * 0.621371
 }
-
+console.log(miles(12))
 
 
 //Task 5b - Feet to CM
@@ -169,11 +223,11 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm) {
+  return cm /30.48
 }
 
-
+console.log(feet(10));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -185,8 +239,9 @@ Using the annoyingSong function below do the following:
     "{number you gave as an argument} bottles of soda on the wall, {number you gave as an argument} bottles of soda, take one down pass it around {number you gave as an argument minus 1} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(hum){
+      for ( let i = num; num > 0 ; i --
+        console.log(`"${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${num} bottles of soda on the wall"`)
 }
 
 

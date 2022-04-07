@@ -77,7 +77,7 @@ Do the following:
 function multiply(a, b){
   return a*b;
 }
-console.log
+console.log(multiply(4,4));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -91,10 +91,10 @@ Do the following:
 */
 
 function dogYears(age){
-let dogAge = 10 * age
+let age = age * 7;
 return dogAge
 }
-console.log(dogAge)
+console.log(dogYears(21))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -124,37 +124,23 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(weight, age); {
-  if (age >= 1); {
-    if (weight <= 5) {
-      return (weight /100) *5;
-    } else if (weight > 5 && weight <= 10) {
-      return (weight / 100) *4;
-    } else if (weight > 10 && weight <= 15) {
-      return (weight 100) *3;
-    } else if (weight > 15) {
-      return (weight / 100) * 2 {
-        else {
-          return 'error'
-        }
-      } else if (age < 1) {
-        if (age <= 0.333) {
-          return (weight /100) * 100
-        } else if (age > 0.333 && age <= .585) {
-          return (weight / 100) * 5
-        } else if (age > 0.585) {
-          return (weight / 100) * 4
-        } else {
-            return "error"
-        }
-      } else {
-        return "error"
-      }
-    }
-  }
+function hungryDog(weight,age){
+  if(age >= 1 && weight <= 5){
+    return weight * 0.05;
+  }else if(age >= 1 && weight >= 6 && weight <= 10){
+    return weight * 0.04;
+  }else if(age >=1 && weight >= 11 && weight <= 15){
+    return weight * 0.03;
+  }else if(age >=1 && weight > 15){
+    return weight * 0.02;
+  }else if(age <1 && age === 0.583){
+    return weight * .04;
+  }else if(age < 0.583 && age >= 0.333){
+    return weight * 0.05;
+  }else if(age < 0.333);
+  return weight * 0.10;
 }
-
-console.log(hungryDog(10, 3))
+console.log(hungryDog(15,1));
 
 
 
@@ -182,20 +168,33 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-  if(user === computer){
-    return `it's a tie`;
-  } else if(user === 'rock' && computer === 'scissors'){
-    return `you win!`;
-  } else if(user === 'paper' && computer === 'rock'){
-    return `you win`;
-  } else if(user === 'scissors' && computer === 'paper'){
-    return `you win!`;
-  }else{
-    return `you lost!`;
-  }
+let computer = Math.random();
+if(computer <= 0.28){
+  computer = 'rock';
+}else if(computer <=0.48){
+  computer ='paper';
+}else if(computer <= 0.88){
+  computer = 'scissors'
 }
 
+function game(user, computer){
+  if(user === computer){
+    return `it's a tie`
+  }else if(user === 'scissors' && computer === 'paper'){
+    return `you win!`;
+  }else if (user === 'paper' && computer === 'rock'){
+    return `you win!`;
+  }else if(user === 'rock' && computer === 'scissors'){
+    return `you win!`
+  }else if(user === 'paper' && computer === 'scissors'){
+    return `you lose!`;
+  }else if(user === 'rock' && computer === 'paper'){
+    return `you lose!`;
+  }else if (user === 'scissors' && computer === 'rock'){
+    return `you lose!`;
+  }
+}
+console.log(game('rock', computer));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -239,11 +238,12 @@ Using the annoyingSong function below do the following:
     "{number you gave as an argument} bottles of soda on the wall, {number you gave as an argument} bottles of soda, take one down pass it around {number you gave as an argument minus 1} bottles of soda on the wall"
 */
 
-function annoyingSong(hum){
-      for ( let i = num; num > 0 ; i --
-        console.log(`"${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${num} bottles of soda on the wall"`)
+function annoyingSong(number){
+  for(let i = number; i > 0; i--){
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`
+  }
 }
-
+console.log(annoyingSong(5));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -260,9 +260,20 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
-}
+function grade(function grade(score){
+  if(score >= 90 && score <= 100){
+    return `you got an A`;
+  }else if (score >= 80 && score <= 89){
+    return `you got a B`;
+  }else if(score >= 70 && score <= 79){
+    return `you got a C`;
+  }else if(score >= 60 && score <= 69){
+    return `you got a D`;
+  }else if(score < 60){
+    return `you got an F`;
+  }
+  }
+  console.log(grade(88));
 
 
 

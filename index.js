@@ -23,9 +23,9 @@ Do the following:
    HINT: no function required
 */
 
-let votingAge = 30
+var votingAge = 31;
 if (votingAge >= 18){
-  console.log(true)
+  console.log(true);
 }
 
 
@@ -40,13 +40,12 @@ Do the following:
    HINT: no function required
 */
 
-let firstThing = 5
-let secondThing = 10
-if (firstThing > secondThing){
-  console.log(firstThing)
-}else{
-  firstThing += 10
-  console.log(firstThing)
+let val1;
+const val2 = 'blue';
+
+if (val2 === 'blue'){
+  val1 = 'My favorite color';
+  console.log(val1);
 }
 
 
@@ -61,9 +60,9 @@ Do the following:
    HINT: look up the Number method
 */
 
-let newNum = "1999"
-console.log(Number(newNum))
-
+const x = "1999";
+const y = parseInt(x);
+console.log(y);
 
 /*
 Task 1d - Multiply
@@ -125,80 +124,44 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(weight, age){
-  if(age>=1){
-    if(weight<=5){
-      return(weight*0.05)
-    }else if(weight>=6 && weight<11){
-      return(weight*0.04)
-    }else if(weight>=11 && weight<=15){
-      return(weight*0.03)
-    }else{
-      return(weight*0.02)
-    }
-  }else{
-    if(age*12 < 4){
-      return(weight*0.1)
-    }else if(age*12 >= 4 && age*12 < 7){
-      return(weight*0.05)
-    }else{
-      return(weight*0.04)
-    }
+const computer = () => {
+  choiceNumber=Math.floor(Math.random()*3);
+  if (choiceNumber===0){
+    return 'rock';
+  }else if (choiceNumber===1){
+    return 'paper';
+  }else if (choiceNumber===2){
+    return 'scissors';
   }
 }
 
-hungryDog(5, 2)
-
-
-
-
-/*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
-
-// Rock, Paper, Scissors - Let's play against the computer!
-/*
-Create a global variable that randomly generates the computer's choice
-Use Math.random to determine the computer's choice (Math.random gives a random number between 0 and 1)
-
-NOTE: Computer must be a global variable. It will be passed into the function as an argument when the function is invoked. 
-
-HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
-
-Use the game function below to do the following:
-1. Receive 2 parameters: the user's choice and the computer's choice
-2. Return whether the user won, lost, or tied based on these rules of the game described below - the strings returned need to match the strings below exactly.
- - win should return "you win!"
- - lose should return "you lose!"
- - tie should return "it's a tie"
-
-RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
-
-HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
-*/
-
-let computer = Math.random();
-if(computer <= 0.28){
-  computer = 'rock';
-}else if(computer <=0.48){
-  computer ='paper';
-}else if(computer <= 0.88){
-  computer = 'scissors'
-}
-
 function game(user, computer){
-  if(user === computer){
-    return `it's a tie`
-  }else if(user === 'scissors' && computer === 'paper'){
-    return `you win!`;
-  }else if (user === 'paper' && computer === 'rock'){
-    return `you win!`;
-  }else if(user === 'rock' && computer === 'scissors'){
-    return `you win!`
-  }else if(user === 'paper' && computer === 'scissors'){
-    return `you lose!`;
-  }else if(user === 'rock' && computer === 'paper'){
-    return `you lose!`;
-  }else if (user === 'scissors' && computer === 'rock'){
-    return `you lose!`;
+  if(user===computer){
+    return "it's a tie"
+  }
+
+  if(user==='rock'){
+    if(computer==='paper'){
+      return "you lose!"
+    } else{
+      return "you win!"
+    }
+  }
+
+  if(user==='paper'){
+    if(computer==='scissors'){
+      return "you lose!"
+    } else{
+      return "you win!"
+    }
+  }
+
+  if(user==='scissors'){
+    if(computer==='rock'){
+      return "you lose!"
+    } else{
+      return "you win!"
+    }
   }
 }
 console.log(game('rock', computer));
@@ -249,9 +212,9 @@ function annoyingSong(bottle_number){
   return(`${bottle_number} bottles of soda on the wall, ${bottle_number} bottles of soda, take one down pass it around ${bottle_number - 1} bottles of soda on the wall`)
 }
 
-function toInvokeAnnoyingSong(bottle_number){
-  for(let i = bottle_number; i === 1; i--){
-    annoyingSong(i)
+function annoyingSong(num){
+  for(let i = num; i > 0; i --){
+    return `${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`
     console.log(annoyingSong(i))
   }
 }
@@ -301,8 +264,16 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(string) {
+  const lowercase = string.toLowerCase();
+  let vowelCount = 0;
+  let letters = lowercase.split('');
+  for (let i = 0; i < letters.length; i++){
+    if(letters[i] === 'a' || letters[i] === 'e' || letters[i] === 'i' || letters[i] === 'o'|| letters[i] === 'u'){
+      vowelCount++;
+    }
+  }
+  return vowelCount;
 }
 
 
